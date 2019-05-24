@@ -3,6 +3,7 @@
     [FullName]   NVARCHAR (MAX) NULL,
     [Department] NVARCHAR (MAX) NULL,
     [Email] NVARCHAR(50) NULL, 
+    [Telephone] NVARCHAR(50) NULL, 
     CONSTRAINT [PK_Employee] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

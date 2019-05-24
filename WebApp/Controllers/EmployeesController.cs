@@ -53,8 +53,8 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FullName,Department, Email")] Employee employee)
-        {
+        public async Task<IActionResult> Create([Bind("Id,FullName,Department, Email, Telephone")] Employee employee)
+		{
             if (ModelState.IsValid)
             {
                 _context.Add(employee);
@@ -85,8 +85,8 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,Department, Email")] Employee employee)
-        {
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,Department, Email, Telephone")] Employee employee)
+		{
             if (id != employee.Id)
             {
                 return NotFound();
